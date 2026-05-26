@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { certifications } from '@/data/certifications';
 import CertificationCard from '@/components/portfolio/CertificationCard';
 import { Modal } from '@/components/ui';
+import { pageContainer, sectionHeader, sectionShell } from '@/lib/sectionClasses';
 import { useMotionInitial } from '@/hooks/useMotionHydration';
 import type { Certification } from '@/types';
 
@@ -25,16 +26,16 @@ export default function CertificateSection() {
   };
 
   return (
-    <section id="certificate" className="py-14 sm:py-16 lg:py-20 bg-white overflow-x-hidden">
-      <div className="container mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section id="certificate" className={`${sectionShell} bg-white`}>
+      <div className={pageContainer}>
         <motion.div
           initial={fadeUp}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-8 sm:mb-10"
+          className={sectionHeader}
         >
-          <p className="text-xs font-bold uppercase tracking-widest text-harbourTeal-600 mb-2">
+          <p className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-harbourTeal-600 mb-1.5 sm:mb-2">
             Learning
           </p>
           <h2 className="section-heading">Certifications</h2>
@@ -45,7 +46,7 @@ export default function CertificateSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="mx-auto grid max-w-5xl grid-cols-1 gap-3 xs:grid-cols-2 sm:gap-4 lg:grid-cols-3"
+          className="mx-auto grid max-w-5xl grid-cols-1 gap-2 xs:grid-cols-2 sm:gap-2.5 md:grid-cols-3 md:gap-3"
           aria-label="Certifications"
         >
           {certifications.map((cert, index) => (

@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { publications, patents } from '@/data/research';
 import { Modal } from '@/components/ui';
+import { pageContainer, sectionGridGap, sectionHeader, sectionShell } from '@/lib/sectionClasses';
 import { useMotionInitial } from '@/hooks/useMotionHydration';
 
 export default function ResearchSection() {
@@ -16,22 +17,22 @@ export default function ResearchSection() {
   const [selectedPatent, setSelectedPatent] = useState<typeof patents[0] | null>(null);
 
   return (
-    <section id="research" className="py-16 sm:py-20 bg-stone-50 overflow-x-hidden">
-      <div className="container mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
+    <section id="research" className={`${sectionShell} bg-stone-50`}>
+      <div className={pageContainer}>
         <motion.div
           initial={fadeUp}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className={sectionHeader}
         >
-          <p className="text-xs font-bold uppercase tracking-widest text-harbourTeal-600 mb-2">Credibility</p>
+          <p className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-harbourTeal-600 mb-1.5 sm:mb-2">
+            Credibility
+          </p>
           <h2 className="section-heading">Research & patent</h2>
         </motion.div>
 
-        {/* Research Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className={`mx-auto grid max-w-4xl grid-cols-1 md:grid-cols-2 ${sectionGridGap}`}>
           {/* Publications */}
           <motion.div
             initial={fadeLeft}
@@ -44,7 +45,7 @@ export default function ResearchSection() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => setSelectedPublication(publications[0])}
-              className="w-full h-64 relative rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-300"
+              className="relative h-44 w-full overflow-hidden rounded-xl shadow-lg transition-all duration-300 sm:h-52 sm:rounded-2xl md:h-56"
             >
               <Image
                 src="/assets/images/publication_bg.jpg"
@@ -76,7 +77,7 @@ export default function ResearchSection() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => setSelectedPatent(patents[0])}
-              className="w-full h-64 relative rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-300"
+              className="relative h-44 w-full overflow-hidden rounded-xl shadow-lg transition-all duration-300 sm:h-52 sm:rounded-2xl md:h-56"
             >
               <Image
                 src="/assets/images/patent_bg.jpg"
@@ -104,7 +105,7 @@ export default function ResearchSection() {
             onClose={() => setSelectedPublication(null)}
             title={selectedPublication.title}
           >
-            <div className="space-y-6">
+            <div className="space-y-3 sm:space-y-4">
               <div>
                 <h4 className="text-lg font-semibold text-gray-900 mb-2">
                   Journal: {selectedPublication.journal}
@@ -144,7 +145,7 @@ export default function ResearchSection() {
             onClose={() => setSelectedPatent(null)}
             title={selectedPatent.title}
           >
-            <div className="space-y-6">
+            <div className="space-y-3 sm:space-y-4">
               <div>
                 <h4 className="text-lg font-semibold text-gray-900 mb-2">
                   Patent Information

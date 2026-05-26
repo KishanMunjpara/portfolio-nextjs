@@ -21,10 +21,10 @@ export default function Footer({ className }: FooterProps) {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
       viewport={{ once: true }}
-      className={`bg-harbour-950 text-stone-300 py-12 border-t border-white/10 ${className || ''}`}
+      className={`border-t border-white/10 bg-harbour-950 py-8 text-stone-300 sm:py-10 ${className || ''}`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+        <div className="grid grid-cols-1 items-center gap-5 md:grid-cols-3 md:gap-6">
           <div className="text-center md:text-left">
             <div className="flex items-center justify-center md:justify-start space-x-3 mb-4">
               <Image

@@ -27,7 +27,7 @@ export default function Tabs({ items, defaultTab, className }: TabsProps) {
   return (
     <div className={cn('w-full', className)}>
       {/* Tab Headers */}
-      <div className="flex border-b border-gray-200 mb-4 sm:mb-6">
+      <div className="mb-3 flex border-b border-gray-200 sm:mb-4">
         {items.map((item) => (
           <button
             key={item.id}

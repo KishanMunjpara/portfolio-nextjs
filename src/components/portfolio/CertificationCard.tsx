@@ -30,7 +30,7 @@ export default function CertificationCard({
       <button
         type="button"
         onClick={() => onSelect(certification)}
-        className="group flex h-full w-full min-w-0 flex-col rounded-xl border border-stone-200/90 bg-white p-3.5 text-left transition-shadow hover:border-harbourTeal-500/30 hover:shadow-md sm:p-4"
+        className="group flex h-full w-full min-w-0 flex-col rounded-lg border border-stone-200/90 bg-white p-2.5 text-left transition-shadow hover:border-harbourTeal-500/30 hover:shadow-md sm:rounded-xl sm:p-3"
       >
         <div className="flex items-start gap-3">
           <div className="relative h-11 w-11 shrink-0 overflow-hidden rounded-lg border border-stone-100 bg-stone-50 p-1 sm:h-12 sm:w-12">

@@ -18,7 +18,7 @@ export default function Timeline({ items, className }: TimelineProps) {
       {/* Timeline Line */}
       <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-harbourTeal-200" />
       
-      <div className="space-y-8">
+      <div className="space-y-4 sm:space-y-5 md:space-y-6">
         {items.map((item, index) => (
           <motion.div
             key={item.id}
@@ -38,10 +38,10 @@ export default function Timeline({ items, className }: TimelineProps) {
             {/* Content */}
             <motion.div
               whileHover={{ scale: 1.02 }}
-              className="min-w-0 flex-1 bg-white rounded-lg p-4 sm:p-6 shadow-md hover:shadow-lg transition-shadow"
+              className="min-w-0 flex-1 rounded-lg bg-white p-3 shadow-sm transition-shadow hover:shadow-md sm:p-4"
             >
-              <div className="flex flex-col gap-1 sm:flex-row sm:items-start sm:justify-between sm:gap-4 mb-2">
-                <h3 className="text-base sm:text-lg font-semibold text-gray-900 text-balance">
+              <div className="mb-1.5 flex flex-col gap-0.5 sm:mb-2 sm:flex-row sm:items-start sm:justify-between sm:gap-3">
+                <h3 className="text-sm font-semibold text-gray-900 text-balance sm:text-base">
                   {item.title}
                 </h3>
                 <div className="flex items-center space-x-2 text-sm text-gray-500">

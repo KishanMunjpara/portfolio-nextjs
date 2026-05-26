@@ -9,6 +9,7 @@ import { PhoneIcon, MapPinIcon, EnvelopeIcon } from '@heroicons/react/24/outline
 import { personalInfo } from '@/data/personal';
 import { contactFormSchema, ContactFormInput } from '@/lib/validations';
 import { Button, Modal } from '@/components/ui';
+import { pageContainer, sectionGridGap, sectionHeader, sectionShell } from '@/lib/sectionClasses';
 import { useMotionInitial } from '@/hooks/useMotionHydration';
 export default function ContactSection() {
   const fadeUp = useMotionInitial({ opacity: 0, y: 20 });
@@ -92,32 +93,32 @@ This message was sent from your portfolio contact form.`;
   ];
 
   return (
-    <section id="contact" className="py-16 sm:py-20 bg-white overflow-x-hidden">
-      <div className="container mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
+    <section id="contact" className={`${sectionShell} bg-white`}>
+      <div className={pageContainer}>
         <motion.div
           initial={fadeUp}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className={sectionHeader}
         >
-          <p className="text-xs font-bold uppercase tracking-widest text-harbourTeal-600 mb-2">Sydney · AU</p>
-          <h2 className="section-heading mb-4">Contact</h2>
-          <p className="section-subheading">
-            Send a message — we&apos;ll open Gmail with your details pre-filled so you can review and send.
+          <p className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-harbourTeal-600 mb-1.5 sm:mb-2">
+            Sydney · AU
+          </p>
+          <h2 className="section-heading">Contact</h2>
+          <p className="section-subheading mt-2">
+            Send a message — we&apos;ll open Gmail with your details pre-filled.
           </p>
         </motion.div>
 
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12">
-            {/* Contact Information */}
+          <div className={`grid grid-cols-1 lg:grid-cols-2 ${sectionGridGap}`}>
             <motion.div
               initial={fadeLeft}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="space-y-6 sm:space-y-8"
+              className="space-y-2.5 sm:space-y-3"
             >
               {contactInfo.map((info, index) => (
                 <motion.div
@@ -126,13 +127,13 @@ This message was sent from your portfolio contact form.`;
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="flex min-w-0 items-center gap-3 sm:gap-4 p-4 sm:p-6 bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300"
+                  className="flex min-w-0 items-center gap-2.5 rounded-lg border border-stone-100 bg-white p-3 shadow-sm transition-shadow hover:shadow-md sm:gap-3 sm:rounded-xl sm:p-3.5"
                 >
-                  <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 bg-harbourTeal-500/15 rounded-lg flex items-center justify-center">
-                    <info.icon className="w-5 h-5 sm:w-6 sm:h-6 text-harbourTeal-600" />
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-harbourTeal-500/15 sm:h-10 sm:w-10">
+                    <info.icon className="h-4 w-4 text-harbourTeal-600 sm:h-5 sm:w-5" />
                   </div>
                   <div className="min-w-0">
-                    <h3 className="text-base sm:text-lg font-semibold text-gray-900">
+                    <h3 className="text-sm font-semibold text-gray-900 sm:text-base">
                       {info.title}
                     </h3>
                     {info.href ? (
@@ -155,12 +156,12 @@ This message was sent from your portfolio contact form.`;
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
                 viewport={{ once: true }}
-                className="pt-8"
+                className="pt-2 sm:pt-3"
               >
                 <Button
                   onClick={() => setIsModalOpen(true)}
                   variant="primary"
-                  size="lg"
+                  size="md"
                   className="w-full"
                 >
                   Send Message
@@ -303,7 +304,7 @@ This message was sent from your portfolio contact form.`;
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="flex justify-center lg:justify-end"
+              className="hidden justify-center lg:flex lg:justify-end"
             >
               <div className="relative">
                 <motion.div
@@ -314,9 +315,9 @@ This message was sent from your portfolio contact form.`;
                 <Image
                   src="/assets/images/contact2.png"
                   alt="Contact illustration"
-                  width={320}
-                  height={320}
-                  className="relative w-full max-w-[16rem] xs:max-w-[18rem] sm:max-w-[20rem] h-auto aspect-square object-contain mx-auto lg:mx-0"
+                  width={280}
+                  height={280}
+                  className="relative h-auto w-full max-w-[14rem] object-contain xl:max-w-[16rem]"
                 />
               </div>
             </motion.div>

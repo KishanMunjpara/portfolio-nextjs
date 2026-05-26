@@ -56,11 +56,23 @@ body {
 
 @layer components {
   .section-heading {
-    @apply text-2xl xs:text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 text-balance;
+    @apply text-xl xs:text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-slate-900 text-balance;
   }
 
   .section-subheading {
-    @apply text-base sm:text-lg text-slate-600 max-w-2xl mx-auto px-1 text-pretty;
+    @apply text-sm sm:text-base text-slate-600 max-w-2xl mx-auto px-1 text-pretty leading-snug;
+  }
+
+  .section-shell {
+    @apply py-8 sm:py-10 md:py-12 lg:py-16 overflow-x-hidden;
+  }
+
+  .page-container {
+    @apply container mx-auto w-full max-w-7xl px-3 sm:px-4 md:px-6 lg:px-8;
+  }
+
+  .section-header {
+    @apply text-center mb-5 sm:mb-6 md:mb-8;
   }
 
   .glass-card {

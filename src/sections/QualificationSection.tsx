@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { workExperience, education } from '@/data/experience';
 import { Tabs, Timeline } from '@/components/ui';
+import { pageContainer, sectionHeader, sectionShell } from '@/lib/sectionClasses';
 import { useMotionInitial } from '@/hooks/useMotionHydration';
 
 export default function QualificationSection() {
@@ -32,24 +33,22 @@ export default function QualificationSection() {
   ];
 
   return (
-    <section id="qualification" className="py-16 sm:py-20 bg-white border-y border-stone-200/80 overflow-x-hidden">
-      <div className="container mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
+    <section id="qualification" className={`${sectionShell} border-y border-stone-200/80 bg-white`}>
+      <div className={pageContainer}>
         <motion.div
           initial={fadeUp}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className={sectionHeader}
         >
-          <p className="text-xs font-bold uppercase tracking-widest text-harbourTeal-600 mb-2">Experience</p>
-          <h2 className="section-heading">Qualification</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            My personal journey
+          <p className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-harbourTeal-600 mb-1.5 sm:mb-2">
+            Experience
           </p>
+          <h2 className="section-heading">Qualification</h2>
+          <p className="section-subheading mt-2">My personal journey</p>
         </motion.div>
 
-        {/* Tabs */}
         <motion.div
           initial={fadeUp}
           whileInView={{ opacity: 1, y: 0 }}
@@ -57,10 +56,10 @@ export default function QualificationSection() {
           viewport={{ once: true }}
           className="max-w-6xl mx-auto"
         >
-          <Tabs 
-            items={tabItems} 
+          <Tabs
+            items={tabItems}
             defaultTab="work"
-            className="bg-white rounded-xl shadow-lg p-4 sm:p-6 overflow-hidden"
+            className="overflow-hidden rounded-lg bg-white p-3 shadow-md sm:rounded-xl sm:p-4 md:p-5"
           />
         </motion.div>
       </div>

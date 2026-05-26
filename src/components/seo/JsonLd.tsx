@@ -1,6 +1,7 @@
 import { personalInfo } from '@/data/personal';
+import { SITE_URL } from '@/data/site';
 
-const siteUrl = 'https://kishan-munjpara.vercel.app';
+const siteUrl = SITE_URL;
 
 export default function JsonLd() {
   const personSchema = {

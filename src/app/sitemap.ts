@@ -1,9 +1,10 @@
 import { MetadataRoute } from 'next';
+import { SITE_URL } from '@/data/site';
 
 export const dynamic = 'force-static';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://kishan-munjpara.vercel.app';
+  const baseUrl = SITE_URL;
 
   return [
     {

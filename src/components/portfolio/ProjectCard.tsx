@@ -57,7 +57,7 @@ export default function ProjectCard({ project, index, highlight = false }: Proje
       transition={{ duration: 0.4, delay: index * 0.03 }}
       viewport={{ once: true, margin: '-24px' }}
       className={cn(
-        'flex h-full min-w-0 gap-3.5 rounded-xl border bg-white p-3.5 sm:gap-4 sm:p-4 transition-shadow hover:shadow-md',
+        'flex h-full min-w-0 gap-2.5 rounded-lg border bg-white p-2.5 transition-shadow hover:shadow-md sm:gap-3 sm:rounded-xl sm:p-3 md:gap-3.5 md:p-3.5',
         highlight ? 'border-sand-400/40' : 'border-stone-200/90',
       )}
     >

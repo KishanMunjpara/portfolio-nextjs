@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import JsonLd from "@/components/seo/JsonLd";
+import { SITE_URL } from "@/data/site";
 import "./globals.css";
 
 const inter = Inter({
@@ -37,14 +38,14 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://kishan-munjpara.vercel.app"),
+  metadataBase: new URL(SITE_URL),
   alternates: {
     canonical: "/",
   },
   openGraph: {
     title: "Kishan Munjpara — MIT (AI) Student & Data & AI Engineer",
     description: "MIT (AI) student at Macquarie University. Data & AI engineer building production Python systems. Open to internships, roles, and research collaborations in Sydney and remote AU.",
-    url: "https://kishan-munjpara.vercel.app",
+    url: SITE_URL,
     siteName: "Kishan Munjpara — Portfolio",
     images: [
       {
