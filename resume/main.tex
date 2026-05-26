@@ -1,0 +1,165 @@
+\documentclass[letterpaper,11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{xcolor}
+
+\definecolor{lightgray}{gray}{0.95} % Define 20% gray color (lighter gray)
+\usepackage{mdframed}
+\usepackage{enumitem}
+\usepackage[colorlinks = true,
+            linkcolor = red,
+            urlcolor  = blue,
+            citecolor = blue,
+            anchorcolor = blue]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+\hypersetup{pdfborder = 0 0 0}
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries}{}{0em}{}
+\titlespacing*{\section}{0pt}{\baselineskip}{0.5\baselineskip}
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+
+
+\begin{document}
+
+\input{Header}
+
+
+% -----------Summary-----------
+% \section{Objective}
+%   \small{Enter your objective here}
+% \vspace{-12pt}
+% % adjust vscape based on the space you want to leave between each section.
+
+
+%-----------EDUCATION-----------
+\input{Education}
+%-----------Technical Skilss-----------
+\input{Skills}
+%-----------EXPERIENCE-----------
+
+\input{Experience}
+
+%-----------PROJECTS-----------
+\input{Projects}
+
+
+%------------Publications-----------
+\input{Publication}
+
+%-----------AWARDS-----------
+\input{Awards}
+
+%-----------PROGRAMMING SKILLS-----------
+
+
+% \section*{\fcolorbox{black}{lightgray}{\parbox{\textwidth}{Awards and Certifications}}}
+% \vspace{-8pt}
+% \textbf{NPTEL}{: Constrained and Unconstrained Optimization.(IIT-KGP)} \\
+% \textbf{ISRO} {: Machine Learning to Deep Learning:A journey for remote sensing data classification}\\
+% \textbf{AWS}{: Demystifying AI/ML/DL.}\\
+% \textbf{Oracle Academy}{: Database Programming with SQL.}\\
+% \textbf{Goldman Sachs}{:Engineering Virtual Program.}\\
+% \textbf{IEEE Computational Intelligence Society}{: Instructor at Quantum Computing Workshop, delivered a session on entanglement and teleportation for quantum computing.}\\
+% Participated in Hackathon \textbf{'Hack the Tank by SVNIT'}, ranked top in YFD track among 40 teams in different tracks.
+% \textbf{HackerRank}{\hspace{1pt}: JAVA(Basic).}\\
+% \textbf{Cisco}{: Python Essentials 1}
+% \textbf{Oracle }{\hspace{30pt}:Database Programming with SQL }
+
+
+
+\end{document}

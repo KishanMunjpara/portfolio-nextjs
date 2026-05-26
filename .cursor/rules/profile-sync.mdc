@@ -1,0 +1,32 @@
+---
+description: Keep portfolio and LaTeX resume in sync via profile.json
+globs:
+  - profile/**
+  - src/data/**
+  - resume/**
+---
+
+# Profile sync (portfolio + resume)
+
+**Single source of truth:** `profile/profile.json`
+
+When the user asks to change resume content, portfolio content, experience, education, skills, projects, publications, or contact details:
+
+1. Edit `profile/profile.json` only (not generated files).
+2. Run `npm run profile:sync` from `portfolio-nextjs/` (also compiles LaTeX → `public/assets/pdfs/kishan_resume.pdf` — one PDF for both site buttons; CV and resume are the same file).
+3. Verify with `npm run build` if portfolio data changed.
+
+**Generated outputs (do not hand-edit):**
+- `src/data/personal.ts`, `experience.ts`, `projects.ts`, `research.ts`, `certifications.ts`
+- `resume/Header.tex`, `Education.tex`, `Skills.tex`, `Experience.tex`, `Projects.tex`, `Publication.tex`, `Awards.tex`
+- `Kishan_Munjpara_Resume_RPL_DBMS.zip` (Overleaf upload bundle)
+
+**Flags in profile.json:**
+- `showOnResume` / `showOnPortfolio` — control what appears on each surface
+- `bullets` — resume; `portfolioDescription` — portfolio site
+
+**Not synced (edit separately):** `opportunities.ts`, `navigation.ts`, `legal.ts`, UI components.
+
+**PDF on site:** Built locally via TinyTeX (`~/Library/TinyTeX`) — no Overleaf required for the portfolio buttons.
+
+**Overleaf (optional):** Upload the zip only if you prefer editing `.tex` there; keep `profile.json` as source of truth.

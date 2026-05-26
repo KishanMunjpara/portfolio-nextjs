@@ -1,0 +1,10 @@
+.vercel
+.next
+out
+node_modules
+
+# LaTeX build artifacts
+resume/*.aux
+resume/*.log
+resume/*.out
+resume/*.pdf

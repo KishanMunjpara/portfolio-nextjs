@@ -1,0 +1,425 @@
+{
+  "_note": "Single document for job applications. CV and resume are the same PDF here — not two files. showOnResume = include on PDF; showOnPortfolio = show on website.",
+  "contact": {
+    "name": "Kishan Munjpara",
+    "email": "kishanmunjpara2710@gmail.com",
+    "phone": "0450960469",
+    "phoneTel": "+61450960469",
+    "location": "Sydney, Australia",
+    "linkedin": "https://linkedin.com/in/KishanMunjpara",
+    "github": "https://github.com/KishanMunjpara",
+    "portfolio": "https://kishan-munjpara.vercel.app/"
+  },
+  "positioning": {
+    "title": "MIT (AI) Student · Data & AI Engineer",
+    "subtitle": "Building cloud-native AI systems in Python — Azure, agents, and production backends. Previously at Smart Decision & Phenomenal AI.",
+    "availability": "Open to internships, graduate roles & research collaborations · Sydney / Remote (AU)",
+    "description": "Backend-focused engineer with experience designing and deploying cloud-based and AI-driven systems in Python. Currently pursuing a Master's in Information Technology (Artificial Intelligence) at Macquarie University, Sydney.",
+    "resumePdfUrl": "/assets/pdfs/kishan_resume.pdf",
+    "profileImage": "/assets/images/profile.png"
+  },
+  "about": {
+    "yearsExperience": "02+",
+    "completedProjects": "08+",
+    "companiesWorked": "05+",
+    "description": "I'm pursuing a Master of IT (Artificial Intelligence) at Macquarie University in Sydney, while continuing to build as a backend and AI engineer. Over the past two years I've shipped Azure Functions serving graph data from Neo4j, Dockerised AI agents for knowledge-graph maintenance, and end-to-end generative-video platforms — alongside IEEE publications and a deep-learning patent filing.\n\nMy roles at Smart Decision Advisory Services and Phenomenal AI taught me how to move fast in startup environments: architecting scalable backends, orchestrating model pipelines on cloud infrastructure, and collaborating with cross-functional teams to deliver production-ready features.\n\nWhat sets me apart is bridging research and practical engineering — from optimising models for edge devices to conversational AI and real-time vision systems with YOLO. I'm open to roles and collaborations where rigorous engineering meets real-world impact."
+  },
+  "education": [
+    {
+      "id": "edu-macquarie",
+      "degree": "Master of Information Technology (AI)",
+      "institution": "Macquarie University",
+      "institutionPortfolio": "Macquarie University, North Ryde, Sydney",
+      "location": "Sydney, Australia",
+      "resumeDateRange": "February 2026 - Present",
+      "startDate": "Feb 2026",
+      "endDate": null,
+      "gpa": null,
+      "coursework": null,
+      "portfolioDescription": "Currently pursuing a Master of Information Technology specializing in Artificial Intelligence.",
+      "showOnResume": true,
+      "showOnPortfolio": true
+    },
+    {
+      "id": "edu-pdeu",
+      "degree": "B.Tech in Information and Communication Technology",
+      "institution": "PDEU, Gandhinagar-Gujarat",
+      "institutionPortfolio": "PDEU, Gandhinagar-Gujarat",
+      "location": "Gandhinagar, Gujarat",
+      "resumeDateRange": "November 2020 - May 2024",
+      "startDate": "Nov 2020",
+      "endDate": "May 2024",
+      "gpa": "9.67/10",
+      "coursework": "ML, Deep Learning, AI, Gen-AI NLP, DBMS, Computer Communication Networks, Quantum Computing, Computer Vision, Theory Of Computation, Data Science, SQL for Beginners, etc.",
+      "portfolioDescription": "Coursework: ML, Deep Learning, AI, Gen-AI NLP, Computer Communication Networks, Data Science, SQL, etc. CGPA: 9.67/10",
+      "showOnResume": true,
+      "showOnPortfolio": true
+    }
+  ],
+  "skills": {
+    "categories": [
+      {
+        "label": "Programming",
+        "items": "Python, FastAPI, SQL, Cypher"
+      },
+      {
+        "label": "AI/ML & GenAI",
+        "items": "PyTorch, TensorFlow, scikit-learn; Transformers (Hugging Face); LLM APIs and LangChain; retrieval / embedding workflows for text; YOLO / CNN-based workflows for vision"
+      },
+      {
+        "label": "Data & Storage",
+        "items": "SQL, Neo4j, MongoDB, Firestore; Azure Blob Storage, Amazon S3"
+      },
+      {
+        "label": "Cloud & DevOps",
+        "items": "Microsoft Azure, Docker, Git, GitHub Actions, Streamlit, Linux"
+      },
+      {
+        "label": "Soft Skills",
+        "items": "Time Management, Teamwork, Problem-solving, Research-oriented Documentation."
+      }
+    ]
+  },
+  "work": [
+    {
+      "id": "work-smart-decision",
+      "companyResume": "Smart Valyou",
+      "companyPortfolio": "Smart Decision Advisory Services",
+      "title": "Data and AI Engineer (Promoted from Data Eng & AI Intern)",
+      "titlePortfolio": "Data and AI Engineer (Started as Intern)",
+      "location": "Singapore (Remote)",
+      "locationResume": "Singapore-Remote",
+      "resumeDateRange": "August 2024 - February 2026",
+      "startDate": "Aug 2024",
+      "endDate": "Feb 2026",
+      "bullets": [
+        "Contributed to an AI-driven product focused on pricing and decision support: researched approaches, implemented algorithmic components in Python, and iterated designs using large, real-world datasets.",
+        "Engineered data workflows and graph-backed data access using Neo4j: modelled entities and relationships, implemented graph queries including ETL/load steps to support product features and analytics, and integrated graph data with Python services and Azure-hosted APIs.",
+        "Built and refined data pipelines for ingest, cleaning, and feature preparation, improving reliability and scalability of downstream AI components and product-facing workflows.",
+        "Applied NLP/LLM-based retrieval and Q&A over policy and business documents, with evaluation against baseline rules or models."
+      ],
+      "learning": "Neo4j; Python data/ML engineering; Azure API integration; product-oriented AI and pipeline design",
+      "portfolioDescription": "Built high-performance Azure Functions in Python that fetch graph data from Neo4j on-demand for the frontend, cutting query latency and boosting UI responsiveness. Designed Dockerised AI agents that analyse Neo4j graphs, then autonomously create, update, or delete nodes/relationships to keep the knowledge base current. Implemented AI-powered features such as report generation and intelligent search, alongside unit testing and integration of Azure Blob Storage for scalable cloud data handling.",
+      "showOnResume": true,
+      "showOnPortfolio": true
+    },
+    {
+      "id": "work-phenomenal",
+      "companyResume": "Phenomenal AI",
+      "companyPortfolio": "Phenomenal AI",
+      "title": "AI Software Engineer (Promoted from Intern & Junior Engineer)",
+      "titlePortfolio": "AI Software Engineer",
+      "location": "Mumbai (Remote)",
+      "locationResume": "Mumbai-Remote",
+      "resumeDateRange": "July 2024 - February 2026",
+      "startDate": "July 2024",
+      "endDate": "Feb 2026",
+      "bullets": [
+        "Delivered features across a generative video platform (frontend, backend, and cloud), including user/session data in MongoDB, video artefacts on AWS S3, and service APIs orchestrating generation jobs.",
+        "Improved an open-source video generation stack end-to-end (inference configuration, pipeline orchestration, and resource usage), raising output quality and cutting latency and compute cost for production use.",
+        "Shipped \"Director\", an interactive assistant that helps users author and refine video scenes (prompt/scene design in-product), increasing engagement and the quality of inputs to generation.",
+        "Used modern AI-assisted development workflows in Cursor to accelerate prototyping while keeping code review, testing, and release discipline for production features."
+      ],
+      "learning": "Text-to-Video generation, Azure Storage, Storage Optimization Techniques, MongoDB, S3.",
+      "portfolioDescription": "Led end-to-end development of a generative video platform, integrating frontend, backend, and cloud components. Optimized open-source video generation model and built AI-powered chatbot \"Director\" for interactive video scene crafting.",
+      "showOnResume": true,
+      "showOnPortfolio": true
+    },
+    {
+      "id": "work-icem",
+      "companyResume": "iCEM - promoted by GMDC",
+      "companyPortfolio": "iCEM - promoted by GMDC",
+      "title": "Intern",
+      "titlePortfolio": "AI Solutions Engineer - Internship",
+      "location": "Ahmedabad, Gujarat",
+      "locationResume": "Ahmedabad-Gujarat",
+      "resumeDateRange": "January 2024 - Jul 2024",
+      "startDate": "Jan 2024",
+      "endDate": "Jul 2024",
+      "bullets": [
+        "Prototyped an integrated Computer Vision, RFID, and IoT solution to monitor mining yard traffic and vehicle movement, targeting ~50% faster turnaround and more reliable real-time tracking.",
+        "Analysed historical sales and operational data, produced forecasting-oriented analytics and dashboard views, and translated findings into recommendations for marketing and planning.",
+        "Worked with IT, sales, and project stakeholders to scope requirements, iterate prototypes, and align AI components with deployable mining operations workflows.",
+        "Developed or supported an LLM-based assistant for financial report interpretation and Q&A, improving how users retrieved and validated information from long documents."
+      ],
+      "learning": "Enterprise Resource Planning (ERP), Data Analysis, IoT and RFID integration with AI",
+      "portfolioDescription": "Designed and prototyped a solution integrating Computer Vision, RFID, and IoT to supervise mining operations, reducing vehicle turnaround time by 50%. Conducted sales data analysis and delivered actionable insights through comprehensive analytics.",
+      "showOnResume": true,
+      "showOnPortfolio": true
+    },
+    {
+      "id": "work-amazon",
+      "companyResume": "Amazon Summer School",
+      "companyPortfolio": "Amazon ML School 2024",
+      "title": "Mentee",
+      "titlePortfolio": "Mentee",
+      "location": "Virtual",
+      "locationResume": "Remote",
+      "resumeDateRange": "Sep 2023 -- Oct 2023",
+      "startDate": "Sept 2023",
+      "endDate": "Oct 2023",
+      "bullets": [
+        "Learned Machine Learning (ML) topics including Supervised Learning, Deep Neural Networks, Dimensionality Reduction, Unsupervised Learning, Probabilistic Graphical Models, Sequential Learning, Causal Inference and Reinforcement Learning."
+      ],
+      "learning": "Foundations for applied deep learning and probabilistic modelling in real-world pipelines.",
+      "portfolioDescription": "Selected for Amazon ML Summer School program focusing on machine learning fundamentals.",
+      "showOnResume": true,
+      "showOnPortfolio": true
+    },
+    {
+      "id": "work-iitram",
+      "companyResume": "IIT RAM",
+      "companyPortfolio": "IITRAM - Ahmedabad",
+      "title": "Summer Research Intern",
+      "titlePortfolio": "Summer Research Intern",
+      "location": "Ahmedabad",
+      "locationResume": "Ahmedabad-Gujarat",
+      "resumeDateRange": "May 2023 - July 2023",
+      "startDate": "May 2023",
+      "endDate": "July 2023",
+      "bullets": [
+        "Developed a deep learning approach based on DeiT for estimating cattle age from dental images, including dataset preparation, training and validation protocols, and comparative experiments against baselines.",
+        "Delivered a research prototype suitable for evaluation on mobile-captured images, supporting the team's filing of a related patent on livestock age estimation from dental imagery."
+      ],
+      "learning": "Image Processing, Computer Vision, Transformer Models",
+      "portfolioDescription": "Conducted research in machine learning and AI applications.",
+      "showOnResume": true,
+      "showOnPortfolio": true
+    }
+  ],
+  "projects": [
+    {
+      "id": "project-smartvalyou",
+      "title": "AI Knowledge-Graph Platform — Smart Decision",
+      "dateRange": "",
+      "bullets": [],
+      "showOnResume": false,
+      "showOnPortfolio": true,
+      "featured": true,
+      "description": "Built high-performance Azure Functions in Python that serve graph data from Neo4j on-demand, cutting query latency and boosting UI responsiveness. Designed Dockerised AI agents that autonomously analyse, create, update, and delete nodes/relationships in Neo4j to keep the knowledge base current. Implemented AI-powered report generation, intelligent search, and integrated Azure Blob Storage for scalable cloud data handling.",
+      "image": "/assets/images/smartvalyou_logo.svg",
+      "technologies": ["Python", "Azure Functions", "Neo4j", "Docker", "LangChain", "Azure Blob Storage", "FastAPI"],
+      "links": [{ "type": "external", "url": "https://www.smartvalyou.ai/", "label": "SmartValyou Platform" }]
+    },
+    {
+      "id": "project-phenomenal",
+      "title": "Generative Video Platform — Phenomenal AI",
+      "showOnResume": false,
+      "showOnPortfolio": true,
+      "featured": true,
+      "description": "Led end-to-end development of an AI-driven generative video platform, integrating frontend, backend, and cloud components. Optimised an open-source video generation model and built an AI-powered chatbot called \"Director\" that lets users interactively craft video scenes through natural-language conversation.",
+      "image": "/assets/images/phenomenal_ai_logo.png",
+      "technologies": ["Python", "FastAPI", "GenAI", "Docker", "Cloud", "Streamlit"],
+      "links": [{ "type": "external", "url": "https://www.phenomenalai.in/", "label": "Phenomenal AI" }]
+    },
+    {
+      "id": "project-chatbot",
+      "title": "ChatBot: AI-powered Conversational Agent",
+      "dateRange": "April 2024- June 2024",
+      "bullets": [
+        "Implemented a real-time interactive chatbot featuring customizable system prompts and efficient memory management using the Meta-Llama-3-8B-Instruct model.",
+        "Deployed the chatbot with Streamlit, ensuring seamless user interaction and effective chat history management."
+      ],
+      "showOnResume": true,
+      "showOnPortfolio": true,
+      "featured": true,
+      "description": "A real-time interactive chatbot built using the Meta-Llama-3-8B-Instruct model with customisable system prompts and efficient memory management. Deployed via Streamlit for seamless user interaction, robust context retrieval, and a streamlined conversation experience.",
+      "image": "/assets/images/new-portfolio_image.jpg",
+      "technologies": ["Python", "Meta-Llama-3-8B", "Streamlit", "NLP", "AI"],
+      "links": [{ "type": "github", "url": "https://github.com/KishanMunjpara/-ChatBot-AI-powered-Conversational-Agent.git", "label": "GitHub Repository" }]
+    },
+    {
+      "id": "project-rag",
+      "title": "Optimized Context Retrieval System for LLM-based Chatbots",
+      "dateRange": "February 2024 - June 2024",
+      "bullets": [
+        "Built a chatbot by integrating Dense Passage Retrieval with GPT and LLAMA, achieving precise context-based information retrieval.",
+        "Enhanced the assistant's accuracy and understanding by utilizing advanced technologies, including the Meta LLAMA 2 model and Hugging Face Embeddings."
+      ],
+      "showOnResume": true,
+      "showOnPortfolio": true,
+      "featured": true,
+      "description": "Developed an advanced context retrieval system integrating Dense Passage Retrieval (DPR) with GPT and LLAMA models. Leverages Meta LLAMA 2 and Hugging Face embeddings for precise, context-aware information retrieval, significantly improving response relevance and user experience.",
+      "image": "/assets/images/portfolio4.jpg",
+      "technologies": ["Python", "DPR", "GPT", "LLAMA 2", "Hugging Face", "NLP"],
+      "links": [{ "type": "pdf", "url": "/assets/pdfs/CP_Project_Kishan.pdf", "label": "Project Report" }]
+    },
+    {
+      "id": "project-palm",
+      "title": "PalmIoT SecureLink",
+      "dateRange": "August 2023 - November 2023",
+      "subtitle": "Raspberry Pi4, Python...",
+      "bullets": [
+        "Developed a palm recognition system for security purposes, implementing feature extraction techniques such as HOG and LBP.",
+        "Integrated the system into hardware using Raspberry Pi and an IP web camera setup by combining multiple convolutional neural networks and utilizing ensemble learning techniques."
+      ],
+      "showOnResume": true,
+      "showOnPortfolio": false,
+      "featured": false,
+      "description": "",
+      "image": "",
+      "technologies": [],
+      "links": []
+    },
+    {
+      "id": "project-cline",
+      "title": "Cline.AI — Clickbait News Detector",
+      "showOnResume": false,
+      "showOnPortfolio": true,
+      "featured": true,
+      "description": "Led a five-member team to build an NLP system achieving 93% accuracy on real-world news headlines. Ranked #18 on Product Hunt and listed on the Chrome Web Store with 230+ organic users. Built a custom Flask API back-end and JavaScript Chrome extension.",
+      "image": "/assets/images/portfolio2.png",
+      "technologies": ["Python", "LSTM", "Flask", "JavaScript", "Chrome Extension", "NLP"],
+      "links": [
+        { "type": "chrome", "url": "https://chromewebstore.google.com/detail/cline-clickbait-news-dete/bcbooidlhpmjncblopcnechegopiamil", "label": "Chrome Web Store" },
+        { "type": "github", "url": "https://github.com/KishanMunjpara/Cline.AI", "label": "GitHub Repository" }
+      ]
+    }
+  ],
+  "publications": [
+    {
+      "id": "pub-traffic",
+      "title": "Density Based Automatic Traffic Control System Using ML",
+      "titlePortfolio": "Density-based Automatic Traffic Control using Machine Learning",
+      "venue": "IEEE",
+      "journalPortfolio": "IEEE",
+      "date": "March 2024",
+      "year": "2024",
+      "link": "https://ieeexplore.ieee.org/document/10461753",
+      "authorsPortfolio": ["Kishan Munjpara", "Dr. Pradip Barik", "Hil Mangukiya", "Anupam Gevariya", "Misha Kotadiya", "Niti Mulani"],
+      "bullets": [
+        "Engineered and deployed an advanced traffic control system using the YOLO machine learning algorithm. Attained a 40% reduction in traffic congestion during peak hours, leading to a 25% decrease in average commute time.",
+        "Showcased the efficacy of this technology in optimizing traffic management, alleviating congestion, and enhancing road safety through real-time density analysis."
+      ],
+      "portfolioDescription": "Engineered and deployed an advanced control system using the YOLO machine learning algorithm. Attained a 40% reduction in traffic congestion during peak hours, leading to a 25% decrease in average commute time. Showcased the efficacy of this technology in optimizing traffic management, alleviating congestion, and enhancing road safety through real-time density analysis."
+    }
+  ],
+  "patents": [
+    {
+      "id": "patent-livestock",
+      "title": "System and Method For Estimating Livestock Age Through Deep Learning",
+      "titlePortfolio": "SYSTEM AND METHOD FOR ESTIMATING LIVESTOCK AGE THROUGH DEEP LEARNING",
+      "date": "March 2024",
+      "year": "2024",
+      "link": "https://drive.google.com/file/d/1nlbPoU8kVEG4Kwl-febT6wHc1T9yUEQq/view?usp=drive_link",
+      "linkPortfolio": "/assets/pdfs/Patent_Certificate.pdf",
+      "authorsPortfolio": [
+        "Kishan Munjpara",
+        "Ankit Bhurane",
+        "Anand Singh",
+        "Manish Sharma",
+        "Telangore Hardik Damodarbha",
+        "Nareshkumar C. Nandeshwar",
+        "Manoj Subhash Patil",
+        "Preeti Ghasad",
+        "Vipin Milind Kamble"
+      ],
+      "bullets": [
+        "The invention pertains to a system and method for accurately estimating the age of nearly 93% of livestock animals (cattle) by leveraging their dental images in a deep learning neural network (data transformer).",
+        "This livestock dental image analysis system employs a self-learning model with 6 identical layers, operational on both user devices and servers, to analyze dental images captured via a mobile camera."
+      ],
+      "portfolioDescription": "The invention pertains to a system and method for accurately estimating the age of nearly 93% of livestock animals (cattle) by leveraging their dental images in a deep learning neural network (data transformer). This livestock dental image analysis system employs a self-learning model with 6 identical layers, operational on both user devices and servers, to analyze dental images captured via a mobile camera."
+    }
+  ],
+  "resumeAwards": [
+    { "issuer": "NPTEL", "title": "Constrained and Unconstrained Optimization (IIT-KGP)." },
+    { "issuer": "Coursera", "title": "Introduction to Statistics.(Stanford University)" },
+    { "issuer": "ISRO", "title": "Machine Learning to Deep Learning: A journey for remote sensing data classification." },
+    { "issuer": "AWS", "title": "Demystifying AI/ML/DL." },
+    { "issuer": "Oracle Academy", "title": "Database Programming with SQL." },
+    { "issuer": "IEEE Computational Intelligence Society", "title": "Instructor at Quantum Computing Workshop, delivered a session on entanglement and teleportation for quantum computing." },
+    { "issuer": "NPTEL", "title": "Probability Theory for Data Science." }
+  ],
+  "certifications": [
+    {
+      "id": "cert-1",
+      "title": "Constrained and Unconstrained Optimization",
+      "issuer": "NPTEL",
+      "image": "/assets/images/NPTEL_logo.png",
+      "certificateUrl": "/assets/images/NPTEL_Certificate.png",
+      "issueDate": "2024",
+      "description": "Advanced optimization techniques for mathematical problems."
+    },
+    {
+      "id": "cert-2",
+      "title": "Machine Learning to Deep Learning: A Journey for Remote Sensing Data Classification",
+      "issuer": "ISRO",
+      "image": "/assets/images/Isro_logo.png",
+      "certificateUrl": "/assets/images/ISRI_certificate.png",
+      "issueDate": "2024",
+      "description": "Comprehensive course on ML to DL transition for remote sensing applications."
+    },
+    {
+      "id": "cert-3",
+      "title": "Probability Theory for Data Science",
+      "issuer": "NPTEL",
+      "image": "/assets/images/NPTEL_logo.png",
+      "certificateUrl": "/assets/images/nptel-new-certificate.png",
+      "issueDate": "2024",
+      "description": "Fundamental probability concepts for data science applications."
+    },
+    {
+      "id": "cert-4",
+      "title": "Supervised Machine Learning: Regression and Classification",
+      "issuer": "Coursera",
+      "image": "/assets/images/coursera_logo.png",
+      "certificateUrl": "/assets/images/Coursera_certificate.png",
+      "issueDate": "2024",
+      "description": "Comprehensive course on supervised learning algorithms."
+    },
+    {
+      "id": "cert-5",
+      "title": "Database Programming with SQL",
+      "issuer": "Oracle",
+      "image": "/assets/images/oracle_logo.jpg",
+      "certificateUrl": "/assets/images/oracal_certificate.jpg",
+      "issueDate": "2024",
+      "description": "Advanced SQL programming and database management."
+    },
+    {
+      "id": "cert-6",
+      "title": "Introduction to statistics",
+      "issuer": "Stanford",
+      "image": "/assets/images/standford_logo.png",
+      "certificateUrl": "/assets/images/standford_certificate.jpeg",
+      "issueDate": "2024",
+      "description": "Statistical methods and data analysis fundamentals."
+    },
+    {
+      "id": "cert-7",
+      "title": "Amazon ML Summer School",
+      "issuer": "Amazon",
+      "image": "/assets/images/amazon_logo.png",
+      "certificateUrl": "/assets/images/amazon_certificate.jpg",
+      "issueDate": "2023",
+      "description": "Intensive machine learning program by Amazon."
+    },
+    {
+      "id": "cert-8",
+      "title": "Quantum Computing",
+      "issuer": "IEEE",
+      "image": "/assets/images/ieee_logo.png",
+      "certificateUrl": "/assets/images/ieee_certificate.jpg",
+      "issueDate": "2024",
+      "description": "Introduction to quantum computing principles and applications."
+    },
+    {
+      "id": "cert-9",
+      "title": "Demystifying AI/ML/DL",
+      "issuer": "AWS",
+      "image": "/assets/images/aws_logo.png",
+      "certificateUrl": "/assets/images/aws_certificate.jpg",
+      "issueDate": "2024",
+      "description": "Understanding artificial intelligence, machine learning, and deep learning."
+    },
+    {
+      "id": "cert-10",
+      "title": "Engineering Virtual Program",
+      "issuer": "Goldman Sachs",
+      "image": "/assets/images/goldman_logo.png",
+      "certificateUrl": "/assets/images/goldman_certificate.jpg",
+      "issueDate": "2024",
+      "description": "Virtual engineering program covering software development practices."
+    }
+  ]
+}
