@@ -36,10 +36,10 @@ jobs:
       - name: Build static site
         run: npm run build
         env:
-          # User site: https://kishanmunjpara.github.io (repo must be KishanMunjpara.github.io)
-          # Project site: set NEXT_PUBLIC_BASE_PATH to repo name, e.g. /portfolio-nextjs
+          # Project site: https://kishanmunjpara.github.io/portfolio-nextjs/
+          # For user site (KishanMunjpara.github.io repo), set BASE_PATH to ''
           NEXT_PUBLIC_SITE_URL: https://kishanmunjpara.github.io
-          NEXT_PUBLIC_BASE_PATH: ''
+          NEXT_PUBLIC_BASE_PATH: /portfolio-nextjs
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
