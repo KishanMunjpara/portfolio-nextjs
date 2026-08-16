@@ -1,26 +1,10 @@
-import Layout from '@/components/layout/Layout';
-import {
-  HeroSection,
-  AboutSection,
-  QualificationSection,
-  PortfolioSection,
-  ResearchSection,
-  CertificateSection,
-  GoalsSection,
-  ContactSection,
-} from '@/sections';
+import SiteShell from '@/components/site/SiteShell';
+import HomeHero from '@/components/site/HomeHero';
 
 export default function HomePage() {
   return (
-    <Layout>
-      <HeroSection />
-      <AboutSection />
-      <QualificationSection />
-      <PortfolioSection />
-      <ResearchSection />
-      <CertificateSection />
-      <GoalsSection />
-      <ContactSection />
-    </Layout>
+    <SiteShell variant="home">
+      <HomeHero />
+    </SiteShell>
   );
 }

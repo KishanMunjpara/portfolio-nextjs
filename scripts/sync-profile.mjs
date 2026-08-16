@@ -145,19 +145,30 @@ ${eduBlocks.join(',\n')}
 `;
 }
 
+function projectImpact(p) {
+  if (p.portfolioImpact) return p.portfolioImpact;
+  if (p.bullets?.length) return p.bullets[0];
+  const metric = p.description?.match(/[^.!?]*(?:\d+%|\d+\+|#\d+)[^.!?]*[.!?]/);
+  if (metric) return metric[0].trim();
+  const first = p.description?.match(/^[^.!?]+[.!?]/);
+  return first ? first[0].trim() : '';
+}
+
 function generateProjects(profile) {
   const projects = profile.projects.filter((p) => p.showOnPortfolio);
-  const blocks = projects.map(
-    (p) => `  {
+  const blocks = projects.map((p) => {
+    const impact = projectImpact(p);
+    const impactLine = impact ? `\n    impact: ${tsString(impact)},` : '';
+    return `  {
     id: ${tsString(p.id)},
     title: ${tsString(p.title)},
-    description: ${tsString(p.description)},
+    description: ${tsString(p.description)},${impactLine}
     image: ${tsString(p.image)},
     technologies: ${JSON.stringify(p.technologies)},
     links: ${JSON.stringify(p.links, null, 6).replace(/\n/g, '\n    ')},
     featured: ${p.featured},
-  }`,
-  );
+  }`;
+  });
 
   return `${GENERATED_BANNER_TS}import { Project } from '@/types';
 
@@ -289,11 +300,23 @@ ${lines} }}
 `;
 }
 
+function resumeSettings(profile) {
+  return {
+    maxBulletsPerRole: profile.resume?.maxBulletsPerRole ?? 4,
+    maxPublicationBullets: profile.resume?.maxPublicationBullets ?? null,
+    includeLearningLines: profile.resume?.includeLearningLines ?? true,
+    includeAwardsSection: profile.resume?.includeAwardsSection ?? true,
+    maxProjects: profile.resume?.maxProjects ?? null,
+  };
+}
+
 function generateResumeExperience(profile) {
+  const settings = resumeSettings(profile);
   const entries = profile.work
     .filter((w) => w.showOnResume)
     .map((w) => {
       const bullets = w.bullets
+        .slice(0, settings.maxBulletsPerRole)
         .map((b) => `        \\resumeItem {${escapeLatex(b)}}`)
         .join('\n');
       let block = `
@@ -303,7 +326,7 @@ function generateResumeExperience(profile) {
       \\resumeItemListStart
 ${bullets}
     \\resumeItemListEnd`;
-      if (w.learning) {
+      if (settings.includeLearningLines && w.learning) {
         block += `\n    \\hspace{15pt}\\textbf{Learning:} ${escapeLatex(w.learning)}`;
       }
       return block;
@@ -320,8 +343,12 @@ ${entries}
 }
 
 function generateResumeProjects(profile) {
-  const entries = profile.projects
-    .filter((p) => p.showOnResume && p.bullets?.length)
+  const settings = resumeSettings(profile);
+  let projects = profile.projects.filter((p) => p.showOnResume && p.bullets?.length);
+  if (settings.maxProjects != null) {
+    projects = projects.slice(0, settings.maxProjects);
+  }
+  const entries = projects
     .map((p) => {
       const subtitle = p.subtitle ? ` $|$ \\emph{${escapeLatex(p.subtitle)}  \\href{}{}}` : '';
       const bullets = p.bullets
@@ -338,7 +365,7 @@ ${bullets}
 
   return `${GENERATED_BANNER_TEX}
 \\section*{\\fcolorbox{black}{lightgray}{\\parbox{\\textwidth}{Projects}}}
-    \\vspace{-5pt}
+\\vspace{-14pt}
 \\resumeSubHeadingListStart
 ${entries}
 \\resumeSubHeadingListEnd
@@ -347,8 +374,12 @@ ${entries}
 }
 
 function generateResumePublications(profile) {
+  const settings = resumeSettings(profile);
+  const bulletLimit = settings.maxPublicationBullets;
+
   const pubBlocks = profile.publications.map((p) => {
     const bullets = p.bullets
+      .slice(0, bulletLimit ?? p.bullets.length)
       .map((b) => `    \\item ${escapeLatex(b)}`)
       .join('\n');
     return `\\resumeProjectHeading
@@ -361,6 +392,7 @@ ${bullets}
 
   const patentBlocks = profile.patents.map((p) => {
     const bullets = p.bullets
+      .slice(0, bulletLimit ?? p.bullets.length)
       .map((b) => `    \\item ${escapeLatex(b)}`)
       .join('\n');
     return `{\\textbf{${escapeLatex(p.title)}}$|$ 
@@ -383,6 +415,11 @@ ${patentBlocks.join('\n')}
 }
 
 function generateResumeAwards(profile) {
+  if (!resumeSettings(profile).includeAwardsSection || !profile.resumeAwards?.length) {
+    return `${GENERATED_BANNER_TEX}
+% Awards omitted — see certifications on portfolio site.
+`;
+  }
   const items = profile.resumeAwards
     .map((a) => `    \\resumeItem{\\textbf{${escapeLatex(a.issuer)}}: ${escapeLatex(a.title)}}`)
     .join('\n');
@@ -397,9 +434,10 @@ ${items}
 `;
 }
 
-function patchMainTex() {
+function patchMainTex(profile) {
   const mainPath = path.join(RESUME_DIR, 'main.tex');
   let main = fs.readFileSync(mainPath, 'utf8');
+  const settings = resumeSettings(profile);
 
   if (!main.includes('\\input{Header}')) {
     main = main.replace(
@@ -413,6 +451,14 @@ function patchMainTex() {
       /%-----------PROGRAMMING SKILLS-----------\n\\section\*\{\\fcolorbox\{black\}\{lightgray\}\{\\parbox\{\\textwidth\}\{Awards and Certifications\}\}\}[\s\S]*?\\resumeItemListEnd\n\\vspace\{-20pt\}/,
       '%-----------AWARDS-----------\n\\input{Awards}',
     );
+  }
+
+  if (settings.includeAwardsSection) {
+    if (!main.includes('\\input{Awards}')) {
+      main += '\n\\input{Awards}\n';
+    }
+  } else {
+    main = main.replace(/\n\\input\{Awards\}\n?/g, '\n% \\input{Awards}\n');
   }
 
   fs.writeFileSync(mainPath, main, 'utf8');
@@ -486,7 +532,8 @@ function createOverleafZip() {
 }
 
 async function main() {
-  console.log('Syncing profile → portfolio + resume\n');
+  const compileResume = process.argv.includes('--resume');
+  console.log('Syncing profile → portfolio' + (compileResume ? ' + resume PDF' : '') + '\n');
   const profile = readProfile();
 
   writeFile('src/data/personal.ts', generatePersonal(profile));
@@ -503,13 +550,20 @@ async function main() {
   writeFile('resume/Publication.tex', generateResumePublications(profile));
   writeFile('resume/Awards.tex', generateResumeAwards(profile));
 
-  patchMainTex();
-  compileResumePdf();
-  createOverleafZip();
+  patchMainTex(profile);
+
+  if (compileResume) {
+    compileResumePdf();
+    createOverleafZip();
+  } else {
+    console.log('\nSkipping resume PDF compile (use: npm run profile:resume)');
+  }
 
   console.log('\nDone.');
-  console.log('  • Portfolio content + site PDF updated');
-  console.log('  • Overleaf zip optional: Kishan_Munjpara_Resume_RPL_DBMS.zip');
+  console.log('  • Portfolio content updated');
+  if (compileResume) {
+    console.log('  • Resume PDF updated at public/assets/pdfs/kishan_resume.pdf');
+  }
   console.log('  Edit profile/profile.json, then run: npm run profile:sync');
 }
 

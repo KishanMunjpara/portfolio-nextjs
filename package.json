@@ -17,6 +17,7 @@
     "test:e2e:ui": "playwright test --ui",
     "prepare": "husky",
     "profile:sync": "node scripts/sync-profile.mjs",
+    "profile:resume": "node scripts/sync-profile.mjs --resume",
     "profile:setup-latex": "node scripts/setup-latex.mjs"
   },
   "lint-staged": {

@@ -12,7 +12,7 @@ export const heroPresentation = {
   },
 
   shipping: {
-    label: 'Shipping',
+    label: 'Previously',
     headline: 'Production AI & backends',
     items: ['Azure · Neo4j', 'AI agents & LLMs', 'GenAI video platforms'],
   },

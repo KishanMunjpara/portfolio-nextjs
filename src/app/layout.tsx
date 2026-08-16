@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import JsonLd from "@/components/seo/JsonLd";
 import { SITE_URL } from "@/data/site";
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     siteName: "Kishan Munjpara — Portfolio",
     images: [
       {
-        url: "/assets/images/profile.png",
+        url: "/assets/images/profile-og.jpg",
         width: 1200,
         height: 630,
         alt: "Kishan Munjpara — MIT (AI) Student & Data & AI Engineer",
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Kishan Munjpara — MIT (AI) Student & Data & AI Engineer",
     description: "MIT (AI) student at Macquarie University. Open to internships, graduate roles, and research collaborations.",
-    images: ["/assets/images/profile.png"],
+    images: ["/assets/images/profile-og.jpg"],
   },
   robots: {
     index: true,
@@ -77,6 +77,12 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  viewportFit: 'cover',
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -85,10 +91,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         <JsonLd />
       </head>
-      <body className="font-sans antialiased" suppressHydrationWarning>
+      <body className="font-sans antialiased bg-stone-50 text-slate-900" suppressHydrationWarning>
         {children}
       </body>
     </html>

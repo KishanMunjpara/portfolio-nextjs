@@ -36,6 +36,7 @@ export interface Project {
   id: string;
   title: string;
   description: string;
+  impact?: string;
   image: string;
   technologies: string[];
   links: ProjectLink[];

@@ -23,7 +23,7 @@ export const personalInfo: PersonalInfo = {
       icon: 'github',
     },
   ],
-  profileImage: "/assets/images/profile.png",
+  profileImage: "/assets/images/profile.webp",
   resumePdfUrl: "/assets/pdfs/kishan_resume.pdf",
 };
 
@@ -31,6 +31,6 @@ export const aboutInfo = {
   yearsExperience: "02+",
   completedProjects: "08+",
   companiesWorked: "05+",
-  description: "I'm pursuing a Master of IT (Artificial Intelligence) at Macquarie University in Sydney, while continuing to build as a backend and AI engineer. Over the past two years I've shipped Azure Functions serving graph data from Neo4j, Dockerised AI agents for knowledge-graph maintenance, and end-to-end generative-video platforms — alongside IEEE publications and a deep-learning patent filing.\n\nMy roles at Smart Decision Advisory Services and Phenomenal AI taught me how to move fast in startup environments: architecting scalable backends, orchestrating model pipelines on cloud infrastructure, and collaborating with cross-functional teams to deliver production-ready features.\n\nWhat sets me apart is bridging research and practical engineering — from optimising models for edge devices to conversational AI and real-time vision systems with YOLO. I'm open to roles and collaborations where rigorous engineering meets real-world impact.",
-  image: "/assets/images/profile.png",
+  description: "I'm pursuing a Master of IT (Artificial Intelligence) at Macquarie University in Sydney. Over the past two years I've shipped Azure Functions serving graph data from Neo4j, Dockerised AI agents for knowledge-graph maintenance, and end-to-end generative-video platforms — alongside IEEE publications and a deep-learning patent filing.\n\nMy roles at Smart Decision Advisory Services and Phenomenal AI taught me how to move fast in startup environments: architecting scalable backends, orchestrating model pipelines on cloud infrastructure, and collaborating with cross-functional teams to deliver production-ready features.\n\nWhat sets me apart is bridging research and practical engineering — from optimising models for edge devices to conversational AI and real-time vision systems with YOLO. I'm open to roles and collaborations where rigorous engineering meets real-world impact.",
+  image: "/assets/images/profile.webp",
 };

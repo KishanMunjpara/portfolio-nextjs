@@ -8,7 +8,7 @@
     "location": "Sydney, Australia",
     "linkedin": "https://linkedin.com/in/KishanMunjpara",
     "github": "https://github.com/KishanMunjpara",
-    "portfolio": "https://kishanmunjpara.github.io/portfolio-nextjs/"
+    "portfolio": "https://kishan-munjpara.vercel.app/"
   },
   "positioning": {
     "title": "MIT (AI) Student · Data & AI Engineer",
@@ -16,13 +16,20 @@
     "availability": "Open to internships, graduate roles & research collaborations · Sydney / Remote (AU)",
     "description": "Backend-focused engineer with experience designing and deploying cloud-based and AI-driven systems in Python. Currently pursuing a Master's in Information Technology (Artificial Intelligence) at Macquarie University, Sydney.",
     "resumePdfUrl": "/assets/pdfs/kishan_resume.pdf",
-    "profileImage": "/assets/images/profile.png"
+    "profileImage": "/assets/images/profile.webp"
+  },
+  "resume": {
+    "maxBulletsPerRole": 3,
+    "maxPublicationBullets": 1,
+    "includeLearningLines": false,
+    "includeAwardsSection": false,
+    "maxProjects": 2
   },
   "about": {
     "yearsExperience": "02+",
     "completedProjects": "08+",
     "companiesWorked": "05+",
-    "description": "I'm pursuing a Master of IT (Artificial Intelligence) at Macquarie University in Sydney, while continuing to build as a backend and AI engineer. Over the past two years I've shipped Azure Functions serving graph data from Neo4j, Dockerised AI agents for knowledge-graph maintenance, and end-to-end generative-video platforms — alongside IEEE publications and a deep-learning patent filing.\n\nMy roles at Smart Decision Advisory Services and Phenomenal AI taught me how to move fast in startup environments: architecting scalable backends, orchestrating model pipelines on cloud infrastructure, and collaborating with cross-functional teams to deliver production-ready features.\n\nWhat sets me apart is bridging research and practical engineering — from optimising models for edge devices to conversational AI and real-time vision systems with YOLO. I'm open to roles and collaborations where rigorous engineering meets real-world impact."
+    "description": "I'm pursuing a Master of IT (Artificial Intelligence) at Macquarie University in Sydney. Over the past two years I've shipped Azure Functions serving graph data from Neo4j, Dockerised AI agents for knowledge-graph maintenance, and end-to-end generative-video platforms — alongside IEEE publications and a deep-learning patent filing.\n\nMy roles at Smart Decision Advisory Services and Phenomenal AI taught me how to move fast in startup environments: architecting scalable backends, orchestrating model pipelines on cloud infrastructure, and collaborating with cross-functional teams to deliver production-ready features.\n\nWhat sets me apart is bridging research and practical engineering — from optimising models for edge devices to conversational AI and real-time vision systems with YOLO. I'm open to roles and collaborations where rigorous engineering meets real-world impact."
   },
   "education": [
     {
@@ -144,7 +151,7 @@
       ],
       "learning": "Enterprise Resource Planning (ERP), Data Analysis, IoT and RFID integration with AI",
       "portfolioDescription": "Designed and prototyped a solution integrating Computer Vision, RFID, and IoT to supervise mining operations, reducing vehicle turnaround time by 50%. Conducted sales data analysis and delivered actionable insights through comprehensive analytics.",
-      "showOnResume": true,
+      "showOnResume": false,
       "showOnPortfolio": true
     },
     {
@@ -163,7 +170,7 @@
       ],
       "learning": "Foundations for applied deep learning and probabilistic modelling in real-world pipelines.",
       "portfolioDescription": "Selected for Amazon ML Summer School program focusing on machine learning fundamentals.",
-      "showOnResume": true,
+      "showOnResume": false,
       "showOnPortfolio": true
     },
     {
@@ -183,7 +190,7 @@
       ],
       "learning": "Image Processing, Computer Vision, Transformer Models",
       "portfolioDescription": "Conducted research in machine learning and AI applications.",
-      "showOnResume": true,
+      "showOnResume": false,
       "showOnPortfolio": true
     }
   ],
@@ -197,6 +204,7 @@
       "showOnPortfolio": true,
       "featured": true,
       "description": "Built high-performance Azure Functions in Python that serve graph data from Neo4j on-demand, cutting query latency and boosting UI responsiveness. Designed Dockerised AI agents that autonomously analyse, create, update, and delete nodes/relationships in Neo4j to keep the knowledge base current. Implemented AI-powered report generation, intelligent search, and integrated Azure Blob Storage for scalable cloud data handling.",
+      "portfolioImpact": "Production Azure Functions + Neo4j graph APIs; Dockerised AI agents autonomously maintain the knowledge graph.",
       "image": "/assets/images/smartvalyou_logo.svg",
       "technologies": ["Python", "Azure Functions", "Neo4j", "Docker", "LangChain", "Azure Blob Storage", "FastAPI"],
       "links": [{ "type": "external", "url": "https://www.smartvalyou.ai/", "label": "SmartValyou Platform" }]
@@ -208,6 +216,7 @@
       "showOnPortfolio": true,
       "featured": true,
       "description": "Led end-to-end development of an AI-driven generative video platform, integrating frontend, backend, and cloud components. Optimised an open-source video generation model and built an AI-powered chatbot called \"Director\" that lets users interactively craft video scenes through natural-language conversation.",
+      "portfolioImpact": "End-to-end generative video platform; built Director chatbot for interactive scene authoring in production.",
       "image": "/assets/images/phenomenal_ai_logo.png",
       "technologies": ["Python", "FastAPI", "GenAI", "Docker", "Cloud", "Streamlit"],
       "links": [{ "type": "external", "url": "https://www.phenomenalai.in/", "label": "Phenomenal AI" }]
@@ -253,7 +262,7 @@
         "Developed a palm recognition system for security purposes, implementing feature extraction techniques such as HOG and LBP.",
         "Integrated the system into hardware using Raspberry Pi and an IP web camera setup by combining multiple convolutional neural networks and utilizing ensemble learning techniques."
       ],
-      "showOnResume": true,
+      "showOnResume": false,
       "showOnPortfolio": false,
       "featured": false,
       "description": "",
