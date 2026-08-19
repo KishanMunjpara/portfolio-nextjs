@@ -1,0 +1,13 @@
+node_modules
+.next
+out
+temp
+resume/*.aux
+resume/*.log
+resume/*.out
+resume/*.pdf
+resume/main_*.tex
+resume/Experience_*.tex
+resume/Projects_*.tex
+resume/Education_*.tex
+resume/main.tex.bak

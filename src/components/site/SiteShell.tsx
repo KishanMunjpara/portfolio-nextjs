@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
 import SiteNav from './SiteNav';
+import SiteMobileNav from './SiteMobileNav';
 import SiteFooter from './SiteFooter';
 
 interface SiteShellProps {
@@ -10,7 +11,7 @@ interface SiteShellProps {
 
 export default function SiteShell({ children, variant = 'page' }: SiteShellProps) {
   return (
-    <div className="flex flex-col min-h-[100dvh] w-full min-w-0 overflow-x-hidden">
+    <div className="flex flex-col min-h-[100dvh] w-full min-w-0 overflow-x-hidden pb-[calc(3.25rem+env(safe-area-inset-bottom))] lg:pb-0">
       <SiteNav />
       <main
         className={
@@ -20,6 +21,7 @@ export default function SiteShell({ children, variant = 'page' }: SiteShellProps
         {children}
       </main>
       <SiteFooter />
+      <SiteMobileNav />
     </div>
   );
 }
