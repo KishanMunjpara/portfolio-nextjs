@@ -19,7 +19,7 @@ export const nowFocusItems = [
     id: 'focus',
     label: 'Focus',
     text: heroPresentation.studying.items.join(', '),
-    href: 'https://www.mq.edu.au/study/find-a-course/courses/master-of-information-technology-in-artificial-intelligence',
+    href: 'https://www.mq.edu.au/study/find-a-course/courses/master-of-information-technology',
     linkLabel: 'MIT (AI) program',
   },
   {
